@@ -347,12 +347,21 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/bow1.cs"
 "Assets/Bulletscript.cs"
+"Assets/currentweapons.cs"
 "Assets/Dummy.cs"
 "Assets/Enemyai.cs"
+"Assets/enemyatks.cs"
+"Assets/Enemyscript.cs"
+"Assets/feather.cs"
 "Assets/InventoryManager.cs"
 "Assets/Item.cs"
+"Assets/itemrelated.cs"
 "Assets/ItemSlot.cs"
+"Assets/meleeweapons.cs"
 "Assets/PlayerMovement.cs"
+"Assets/rotatewithcam.cs"
+"Assets/turningmagic.cs"
+"Assets/turnwithplayer.cs"
 -langversion:9.0
 
 /deterministic

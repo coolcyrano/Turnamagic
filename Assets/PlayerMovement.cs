@@ -10,10 +10,10 @@ public class PlayerMovement : MonoBehaviour
     public float jumpHeight = 2f;      // Jump height
 
     private CharacterController controller;
-    private Vector3 velocity;
+    public Vector3 velocity;
     private float yRotation = 0f;      // Store the current y-rotation of the camera
     private Transform playerCamera;
-    private bool isGrounded;
+    public bool isGrounded;
 
     void Start()
     {
@@ -63,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
         playerCamera.localRotation = Quaternion.Euler(yRotation, 0, 0);
     }
 
-    void Jump()
+   public void Jump()
     {
         // If the player is grounded and presses the jump button (spacebar)
         if (isGrounded && Input.GetButtonDown("Jump"))

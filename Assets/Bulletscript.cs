@@ -6,32 +6,45 @@ public class Bulletscript : MonoBehaviour
 {Vector3 hayvector;
 public float bulletspeed= 1f;
 Rigidbody bulletrig;
-private  Dummy enemy;
+private  Dummy dummy;
+private Enemyscript enemy;
+public float bulletdamage = 1;
     // Start is called before the first frame update
     void Start()
     {
             bulletrig = GetComponent<Rigidbody>();
-            hayvector=new Vector3(Random.Range(100f,500f)*bulletspeed*Time.deltaTime,0.01f,0f);
+            
             hayvector = transform.forward * bulletspeed;
             bulletrig.velocity = hayvector;
-            enemy=GameObject.Find("Sphere").GetComponent<Dummy>();
+            dummy=GameObject.Find("dummy").GetComponent<Dummy>();
+             bulletrig.velocity = transform.forward * bulletspeed;
+         
     }
 
     // Update is called once per frame
     void Update()
     {
        
-         bulletrig.velocity = transform.forward * bulletspeed;
-         
+        
     }
      private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.tag!="Player")
-        {if(collision.gameObject.tag=="Enemy")
+        {if(collision.gameObject.tag=="dummy")
         {
-            enemy.TakeDamage(1);
+            dummy.TakeDamage(bulletdamage);
         }
             Destroy(gameObject);
+        }
+        if(collision.gameObject.tag=="Player")
+        {
+            Destroy(gameObject);
+        }
+        if(collision.gameObject.tag=="Enemy")
+        {
+            enemy = collision.gameObject.GetComponent<Enemyscript>();
+            enemy.hp = enemy.hp - bulletdamage;
+            
         }
 }
 }

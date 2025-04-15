@@ -7,14 +7,17 @@ TagManager:
   - ItemSlot
   - Bullet
   - Enemy
+  - turnableitem
+  - dummy
+  - enemyatk
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Nonplayer
   - Water
   - UI
-  - 
+  - Player
   - 
   - 
   - 
