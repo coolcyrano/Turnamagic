@@ -10,7 +10,7 @@ public float Damage=25f;
     // Start is called before the first frame update
     void Start()
     {
-      hpofplayer=GameObject.Find("player").GetComponent<currentweapons>();
+      hpofplayer=GameObject.Find("Player").GetComponent<currentweapons>();
     }
 
     // Update is called once per frame

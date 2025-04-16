@@ -5,7 +5,6 @@ ScriptsOnlyBuild:
     - Dummy
     - Enemyscript
     - InventoryManager
-    - Item
     - ItemSlot
     - PlayerMovement
     - bow1
@@ -167,8 +166,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6340}
     - Class: 114
-      Script: {instanceID: 6390}
-    - Class: 114
       Script: {instanceID: 6886}
     - Class: 115
       Script: {instanceID: 0}
@@ -178,13 +175,17 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 143
       Script: {instanceID: 0}
+    - Class: 154
+      Script: {instanceID: 0}
+    - Class: 156
+      Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
       Script: {instanceID: 0}
-    - Class: 212
-      Script: {instanceID: 0}
     - Class: 213
+      Script: {instanceID: 0}
+    - Class: 218
       Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
@@ -1072,4 +1073,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: D:/turnamagic/turnamagic.exe
+  playerPath: D:/turnamagic/Build/turnamagic.exe
