@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class feather : MonoBehaviour
-{private Vector3 featherj;
+{
 private CharacterController controller;
 private float ja = 0;
 public Transform player;

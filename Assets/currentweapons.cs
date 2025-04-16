@@ -27,7 +27,8 @@ currentlyEquippedWeapon.transform.SetParent(camera);
     {
           { if (Input.GetButtonDown("turnmagic"))
        {
-        Instantiate(magicbull,placeforweap.position + new Vector3(2, 0, 0),placeforweap.rotation);
+        Vector3 shootDirection = camera.forward;
+        Instantiate(magicbull,placeforweap.position + shootDirection * 0.1f + new Vector3(0, 0, 2),placeforweap.rotation);
        }
         if (Input.GetButtonDown("cycle"))
         {  
@@ -61,11 +62,6 @@ currentequip = currentlyequipped;
         }
     }
 
-void addweapon(GameObject newWeapon)
-    {
-        currentweap.Add(newWeapon);  // Adding new weapon to the list
-        Debug.Log("item added");
-    }
 }
        public void TakeDamage(float damage)
     {
